@@ -969,8 +969,7 @@ export default class Select extends Component<Props, State> {
     if (event && event.type === 'mousedown' && event.button !== 0) {
       return;
     }
-    this.clearValue();
-    event.stopPropagation();
+    this.clearValue();    
     this.openAfterFocus = false;
     if (event.type === 'touchend') {
       this.focusInput();

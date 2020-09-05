@@ -1,5 +1,5 @@
 {
-  "name": "react-select",
+  "name": "@techvox/react-select",
   "version": "3.1.0",
   "description": "A Select control built with and for ReactJS",
   "main": "dist/react-select.cjs.js",
@@ -9,7 +9,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/JedWatson/react-select.git"
+    "url": "https://github.com/techvoxinc/react-select.git"
   },
   "dependencies": {
     "@babel/runtime": "^7.4.4",
