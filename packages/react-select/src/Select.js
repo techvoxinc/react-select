@@ -243,6 +243,8 @@ export type Props = {
   tabSelectsValue: boolean,
   /* The value of the select; reflected by the selected option */
   value: ValueType,
+  /* Indicates if select is in modal and should render menu on scroll */
+  repositionOnScroll: boolean
 };
 
 export const defaultProps = {
@@ -1659,6 +1661,7 @@ export default class Select extends Component<Props, State> {
       noOptionsMessage,
       onMenuScrollToTop,
       onMenuScrollToBottom,
+      repositionOnScroll
     } = this.props;
 
     if (!menuIsOpen) return null;
@@ -1764,6 +1767,7 @@ export default class Select extends Component<Props, State> {
         controlElement={this.controlRef}
         menuPlacement={menuPlacement}
         menuPosition={menuPosition}
+        repositionOnScroll={repositionOnScroll}
       >
         {menuElement}
       </MenuPortal>

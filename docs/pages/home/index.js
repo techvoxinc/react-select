@@ -8,6 +8,7 @@ import {
   AsyncPromises,
   AnimatedMulti,
   BasicSingle,
+  Modal,
   BasicGrouped,
   BasicMulti,
   CreatableSingle,
@@ -29,6 +30,16 @@ export default function Home() {
   If you're coming from react-select v1, check out the [Upgrade Guide](/upgrade-guide).
 
   To contribute, or open an issue, check out the [source code on GitHub](https://github.com/JedWatson/react-select).
+
+  ${(
+    <ExampleWrapper
+      label="Modal"
+      urlPath="docs/examples/Modal.js"
+      raw={require('!!raw-loader!../../examples/Modal.js')}
+    >
+      <Modal />
+    </ExampleWrapper>
+  )}
 
   ${(
     <ExampleWrapper

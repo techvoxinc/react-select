@@ -9,6 +9,7 @@ import {
 import { jsx } from '@emotion/core';
 import { createPortal } from 'react-dom';
 import PropTypes from 'prop-types';
+import rafSchedule from 'raf-schd';
 
 import {
   animatedScrollTo,
@@ -499,6 +500,21 @@ export class MenuPortal extends Component<MenuPortalProps, MenuPortalState> {
       this.setState({ placement });
     }
   };
+
+  componentDidMount() {
+    if (this.props.repositionOnScroll) {
+      document.addEventListener('scroll', this.handleScroll, true);
+    }
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('scroll', this.handleScroll, true);
+  }
+
+  handleScroll = rafSchedule(() => {
+    this.setState({ rerender: Math.random });
+  });
+
   render() {
     const {
       appendTo,
